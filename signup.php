@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root"; // Default username for MySQL
 $password = ""; // Default password for MySQL (usually empty)
-$dbname = "career_counselling"; // Your database name
+$dbname = "career_counselling"; // Your database
 
 // Create a connection to the MySQL database
 $conn = new mysqli($servername, $username, $password, $dbname);
