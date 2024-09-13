@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Us page of CareerVista.com">
+    <title>About Us - CareerVista.com</title>
+    <!--link rel="stylesheet" href="styles.css">  Link to your CSS file -->
+    <style>
+        body {
+            font-family: serif, Garamond;
+            margin: 0;
+            padding: 0;
+            background-color: #fefefe;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            border: none;
+            outline: none;
+            border-radius: 5px 0 0 5px;
+            flex: 1;
+        }
+
+        .search-bar button {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #3f68ce;
+            color: #fff;
+            cursor: pointer;
+            font-family: Garamond, serif; /* Updated font for button */
+        }
+
+        .search-bar button:hover {
+            background-color: #2d50a3;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: hsl(0, 39%, 95%);
+        }
+
+        .about-section h1 {
+            color: #3f68ce;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-section .sign-up-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            color: #fff;
+            background-color: #3f68ce;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .about-section .sign-up-button:hover {
+            background-color: #2d50a3;
+        }
+
+        .icons-section {
+            display: flex;
+            justify-content: center;
+            padding: 50px 0;
+        }
+
+        .icon-box {
+            width: 250px;
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .icon-box img {
+            width: 100px; /* Adjusted size */
+            height: auto;
+            display: block; /* Ensures that the image is aligned above the text */
+            margin: 0 auto; /* Centers the image horizontally */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .icon-box .static-img {
+            display: block;
+        }
+
+        .icon-box .animated-img {
+            display: none;
+        }
+
+        .icon-box:hover .static-img {
+            display: none;
+        }
+
+        .icon-box:hover .animated-img {
+            display: block;
+        }
+
+        .icon-box h3, .icon-box p {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h2>CareerVista</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Explore CareerVista</a></li>
+                <li>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button type="button">Search</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>CareerVista.com</h1>
+        <p>CareerVista.com is an extensive platform for individuals exploring career opportunities, offering them the most accurate and relevant data about various professions. We provide insights and tools to help you make the best decisions regarding your career path.</p>
+        <a href="signup.html" class="sign-up-button">Sign Up to Explore</a>
+    </section>
+
+    <!-- Icons Section -->
+    <section class="icons-section">
+        <div class="icon-box">
+            <img src="target_static.jpg" alt="Icon 1" class="static-img">
+            <img src="target.gif" alt="Icon 1" class="animated-img">
+            <h3>Target</h3>
+            <p>We aim to give precise data on career options.</p>
+        </div>
+        <div class="icon-box">
+            <img src="path/to/your/icon2.png" alt="Icon 2">
+            <h3>Launch</h3>
+            <p>Helping you take the right step forward in your career.</p>
+        </div>
+        <div class="icon-box">
+            <img src="path/to/your/icon3.png" alt="Icon 3">
+            <h3>Growth</h3>
+            <p>Supporting your growth with verified insights and tools.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 CareerVista.com. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
