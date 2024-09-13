@@ -1,0 +1,107 @@
+
+/* General Page Styling */
+body {
+    font-family: 'Garamond', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Signup Form Container */
+.signup-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    position: relative; /* For leaves positioning */
+    text-align: center;
+}
+/* Login Form Container */
+.login-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    position: relative; /* For leaf positioning */
+    text-align: center;
+}
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #7489be;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #37405a;
+}
+
+/* Leaf Decorations */
+.leaf {
+    position: absolute;
+    background-image: url('leaf.png'); /* Replace with your actual leaf image URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    opacity: 0.7; /* Slight transparency */
+}
+
+
+
+.leaf-3 {
+    bottom: -20px;
+    left: 40%;
+}
+
+.leaf-4 {
+    bottom: -20px;
+    right: 40%;
+}
+
+/* Optional: Add responsiveness */
+@media (max-width: 768px) {
+    .signup-form {
+        width: 100%;
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .leaf {
+        width: 40px;
+        height: 40px;
+    }
+}
