@@ -33,7 +33,7 @@ if ($stmt->num_rows > 0) {
     if (password_verify($pass, $hashedPassword)) {
         // Password is correct, start session and redirect to a protected page
         $_SESSION['username'] = $user;
-        header("Location: http://localhost/project/signup.html"); // Redirect to a protected page
+        header("Location: expllorepage.html"); // Redirect to a protected page
         exit();
     } else {
         echo "Invalid password.";
