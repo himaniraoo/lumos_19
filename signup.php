@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute the statement
         if ($stmt->execute()) {
-            echo "Signup successful!";
+             header("Location: expllorepage.html");
         } else {
             echo "Error: " . $stmt->error;
         }
