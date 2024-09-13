@@ -5,6 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Careers</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* High z-index to cover other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.6); /* Black with opacity for better visibility */
+    padding-top: 60px; /* Space from the top, adjust if needed */
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; /* Centered with margin from top */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a maximum width */
+    border-radius: 10px;
+    overflow-y: auto; /* Add vertical scrolling if content is too long */
+    max-height: 80vh; /* Max height to prevent overflowing off the screen */
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Fields */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="url"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border do not affect width */
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #7489be;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #37405a;
+}
+
+    </style>
 </head>
 <body>
     <header>
@@ -14,6 +91,7 @@
 
     <section id="careerGrid">
                 <!-- Career Post for Pilot -->
+                 <a href="after_explore.html" style="text-decoration: none; color: inherit;">
                 <div class="careerCard">
                     <img src="pilot.jpg" alt="Pilot Career">
                     <div class="careerInfo">
@@ -24,18 +102,20 @@
                         <p>Recommended Colleges: Embry-Riddle Aeronautical University, Purdue University</p>
                     </div>
                 </div>
+                </a>
         
                 <!-- Career Post for Software Engineer -->
-                <div class="careerCard">
-                    <img src="engineering.jpg" alt="Software Engineer Career">
-                    <div class="careerInfo">
-                        <h2>Software Engineer</h2>
-                        <p>Potential Earnings: $90,000 - $150,000/year</p>
-                        <p>Required Subjects: Computer Science, Mathematics</p>
-                        <p>Exams Required: None, but certifications recommended</p>
-                        <p>Recommended Colleges: MIT, Stanford, Carnegie Mellon University</p>
-                    </div>
-                </div>
+<div class="careerCard">
+    <img src="engineering.jpg" alt="Software Engineer Career">
+    <div class="careerInfo">
+        <h2>Software Engineer</h2>
+        <p>Potential Earnings: $90,000 - $150,000/year</p>
+        <p>Required Subjects: Computer Science, Mathematics</p>
+        <p>Exams Required: None, but certifications recommended</p>
+        <p>Recommended Colleges: MIT, Stanford, Carnegie Mellon University</p>
+    </div>
+</div>
+
         
                 <!-- New Career Post for Journalism -->
                 <div class="careerCard">
