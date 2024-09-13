@@ -55,3 +55,47 @@ document.getElementById("careerForm").addEventListener("submit", function(event)
     document.getElementById("careerForm").reset();
     modal.style.display = "none";
 });
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', function () {
+    const searchBar = document.getElementById('searchBar');
+    const careerCards = document.querySelectorAll('.careerCard');
+
+    // Function to filter careers based on the search query
+    searchBar.addEventListener('input', function () {
+        const searchQuery = searchBar.value.toLowerCase();
+
+        // Loop through all career cards
+        careerCards.forEach(function (card) {
+            const careerTitle = card.querySelector('h2').textContent.toLowerCase();
+
+            // Check if the career title matches the search query
+            if (careerTitle.includes(searchQuery)) {
+                card.style.display = 'flex'; // Show the card if it matches
+            } else {
+                card.style.display = 'none'; // Hide the card if it doesn't match
+            }
+        });
+    });
+    
+    // Modal handling
+    const modal = document.getElementById("careerModal");
+    const addCareerBtn = document.getElementById("addCareerBtn");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    // Open the modal when the add button is clicked
+    addCareerBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // Close the modal when the close button is clicked
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal if the user clicks outside of it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
