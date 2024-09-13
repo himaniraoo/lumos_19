@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Careers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Explore Careers</h1>
+        <input type="text" id="searchBar" placeholder="Search careers...">
+    </header>
+
+    <section id="careerGrid">
+                <!-- Career Post for Pilot -->
+                <div class="careerCard">
+                    <img src="pilot.jpg" alt="Pilot Career">
+                    <div class="careerInfo">
+                        <h2>Pilot</h2>
+                        <p>Potential Earnings: $80,000 - $200,000/year</p>
+                        <p>Required Subjects: Physics, Mathematics, English</p>
+                        <p>Exams Required: Commercial Pilot License (CPL)</p>
+                        <p>Recommended Colleges: Embry-Riddle Aeronautical University, Purdue University</p>
+                    </div>
+                </div>
+        
+                <!-- Career Post for Software Engineer -->
+                <div class="careerCard">
+                    <img src="engineering.jpg" alt="Software Engineer Career">
+                    <div class="careerInfo">
+                        <h2>Software Engineer</h2>
+                        <p>Potential Earnings: $90,000 - $150,000/year</p>
+                        <p>Required Subjects: Computer Science, Mathematics</p>
+                        <p>Exams Required: None, but certifications recommended</p>
+                        <p>Recommended Colleges: MIT, Stanford, Carnegie Mellon University</p>
+                    </div>
+                </div>
+        
+                <!-- New Career Post for Journalism -->
+                <div class="careerCard">
+                    <img src="journalism.jpg" alt="Journalism Career">
+                    <div class="careerInfo">
+                        <h2>Journalism</h2>
+                        <p>Potential Earnings: $40,000 - $90,000/year</p>
+                        <p>Required Subjects: English, Media Studies, Communication</p>
+                        <p>Exams Required: GRE, GMAT (optional)</p>
+                        <p>Recommended Colleges: Columbia Journalism School, UC Berkeley</p>
+                    </div>
+                </div>
+        
+                <!-- New Career Post for Forensic Science -->
+                <div class="careerCard">
+                    <img src="forensic science.jpg" alt="Forensic Science Career">
+                    <div class="careerInfo">
+                        <h2>Forensic Science</h2>
+                        <p>Potential Earnings: $55,000 - $100,000/year</p>
+                        <p>Required Subjects: Chemistry, Biology, Criminal Justice</p>
+                        <p>Exams Required: Forensic Science Certification</p>
+                        <p>Recommended Colleges: University of Florida, Penn State University</p>
+                    </div>
+                </div>
+        
+                <!-- New Career Post for Actuarial Science -->
+                <div class="careerCard">
+                    <img src="actuary-examines.jpg" alt="Actuarial Science Career">
+                    <div class="careerInfo">
+                        <h2>Actuarial Science</h2>
+                        <p>Potential Earnings: $70,000 - $120,000/year</p>
+                        <p>Required Subjects: Mathematics, Statistics, Economics</p>
+                        <p>Exams Required: Actuarial Exams (SOA, CAS)</p>
+                        <p>Recommended Colleges: University of Waterloo, Georgia State University</p>
+                    </div>
+                </div>
+        
+                <!-- New Career Post for Research Analyst -->
+                <div class="careerCard">
+                    <img src="research.jpg" alt="Research Analyst Career">
+                    <div class="careerInfo">
+                        <h2>Research Analyst</h2>
+                        <p>Potential Earnings: $60,000 - $110,000/year</p>
+                        <p>Required Subjects: Economics, Data Science, Business</p>
+                        <p>Exams Required: GRE, GMAT (optional)</p>
+                        <p>Recommended Colleges: Harvard University, LSE</p>
+                    </div>
+                </div>
+        
+                <!-- New Career Post for Fashion Designer -->
+                <div class="careerCard">
+                    <img src="fashion.jpg" alt="Fashion Designer Career">
+                    <div class="careerInfo">
+                        <h2>Fashion Designer</h2>
+                        <p>Potential Earnings: $50,000 - $120,000/year</p>
+                        <p>Required Subjects: Fashion Design, Art, Business</p>
+                        <p>Exams Required: None</p>
+                        <p>Recommended Colleges: Parsons School of Design, Central Saint Martins</p>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Plus Icon for Adding New Career -->
+    <button id="addCareerBtn">+</button>
+
+    <!-- Modal Form for Adding New Career -->
+    <div id="careerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Career</h2>
+            <form id="careerForm">
+                <label for="careerTitle">Career Title:</label>
+                <input type="text" id="careerTitle" placeholder="e.g. Data Scientist" required><br>
+
+                <label for="careerEarnings">Potential Earnings:</label>
+                <input type="text" id="careerEarnings" placeholder="e.g. $70,000 - $130,000/year" required><br>
+
+                <label for="careerSubjects">Required Subjects:</label>
+                <input type="text" id="careerSubjects" placeholder="e.g. Computer Science, Mathematics" required><br>
+
+                <label for="careerExams">Required Exams:</label>
+                <input type="text" id="careerExams" placeholder="e.g. GRE, GMAT" required><br>
+
+                <label for="careerColleges">Recommended Colleges:</label>
+                <input type="text" id="careerColleges" placeholder="e.g. Harvard University" required><br>
+
+                <label for="careerImage">Image URL:</label>
+                <input type="url" id="careerImage" placeholder="Enter image URL" required><br>
+
+                <button type="submit">Add Career</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="explore.js"></script>
+</body>
+</html>
