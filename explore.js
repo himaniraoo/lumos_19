@@ -1,9 +1,3 @@
-document.querySelectorAll('.careerCard').forEach(card => {
-    card.addEventListener('click', () => {
-        alert('More details about the career will be shown here!');
-        // You can implement a modal or redirect to another page for full career details
-    });
-});
 
 // Modal functionality
 const modal = document.getElementById("careerModal");
