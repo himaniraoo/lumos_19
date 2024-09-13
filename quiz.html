@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Quiz</title>  
+    <link rel="stylesheet" href="quiz-style.css">
+</head>
+<body>
+    <header>
+        <h1>Discover Your Ideal Career</h1>
+        <p>Answer these questions based on your interests and preferences to find out which career suits you best.</p>
+    </header>
+
+    <main>
+        <form id="careerQuiz" class="quiz-form">
+            <!-- Question 1 -->
+            <div class="quiz-question">
+                <h3>1. What subject do you enjoy the most in school?</h3>
+                <label><input type="radio" name="q1" value="Pilot" required> Mathematics or Physics</label><br>
+                <label><input type="radio" name="q1" value="Software Engineer"> Computer Science</label><br>
+                <label><input type="radio" name="q1" value="Journalist"> English or Social Studies</label><br>
+                <label><input type="radio" name="q1" value="Fashion Designer"> Art or Design</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-question">
+                <h3>2. How do you like to spend your weekends?</h3>
+                <label><input type="radio" name="q2" value="Pilot" required> Traveling or outdoor adventures</label><br>
+                <label><input type="radio" name="q2" value="Software Engineer"> Coding or playing video games</label><br>
+                <label><input type="radio" name="q2" value="Journalist"> Reading or writing stories</label><br>
+                <label><input type="radio" name="q2" value="Fashion Designer"> Drawing or creating new things</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-question">
+                <h3>3. What type of environment do you prefer working in?</h3>
+                <label><input type="radio" name="q3" value="Pilot" required> On the go or in new locations</label><br>
+                <label><input type="radio" name="q3" value="Software Engineer"> At a desk or home office</label><br>
+                <label><input type="radio" name="q3" value="Journalist"> Out in the field or a newsroom</label><br>
+                <label><input type="radio" name="q3" value="Fashion Designer"> In a creative studio or workshop</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz-question">
+                <h3>4. What motivates you the most in life?</h3>
+                <label><input type="radio" name="q4" value="Pilot" required> Exploring the world</label><br>
+                <label><input type="radio" name="q4" value="Software Engineer"> Solving problems and building things</label><br>
+                <label><input type="radio" name="q4" value="Journalist"> Telling stories and sharing information</label><br>
+                <label><input type="radio" name="q4" value="Fashion Designer"> Creating new designs and expressing myself</label>
+            </div>
+
+            <button type="submit">Get Career Suggestion</button>
+        </form>
+
+        <div id="result" style="display:none;">
+            <h2>Your Suggested Career: <span id="careerResult"></span></h2>
+            <p id="careerDescription"></p>
+        </div>
+
+        <div id="careerOptions" style="display:none;">
+            <!-- Career options will be dynamically added here -->
+        </div>
+    </main>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
