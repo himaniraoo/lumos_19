@@ -12,12 +12,11 @@
             background-color: #f4f4f4;
         }
 
-        /* Updated top navigation bar styling */
         .navbar {
             display: flex;
-            justify-content: space-around; /* Evenly spaced items */
+            justify-content: space-around;
             align-items: center;
-            background-color: #235382; /* Topbar color */
+            background-color: #235382;
             padding: 16px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -46,7 +45,6 @@
             color: white;
         }
 
-        /* Main content styling */
         .content {
             padding: 60px 30px;
             max-width: 1200px;
@@ -54,13 +52,13 @@
             background: white;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            display: none; /* Initially hide all sections */
+            display: none;
             opacity: 0;
             transition: opacity 0.6s ease-in-out;
         }
 
         .content.active {
-            display: block; /* Show the active section */
+            display: block;
             opacity: 1;
         }
 
@@ -70,7 +68,6 @@
             margin-bottom: 25px;
         }
 
-        /* Improved the list styling */
         ul {
             list-style-type: none;
             padding: 0;
@@ -84,7 +81,7 @@
         }
 
         ul li:before {
-            content: "✓"; /* Add a check mark */
+            content: "✓";
             color: #00bcd4;
             font-weight: bold;
             position: absolute;
@@ -98,7 +95,6 @@
             color: #3f68ce;
         }
 
-        /* Updated grid styling */
         .college-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -161,176 +157,190 @@
             background-color: #00838f;
         }
 
+        .dialog {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        .dialog-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .dialog-content button {
+            background-color: #3f68ce;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        .dialog-content button:hover {
+            background-color: #0056b3;
+        }
+
         .success-stories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
 
-.success-story {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+        .success-story {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-.success-story:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
+        .success-story:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
 
-.success-story img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
+        .success-story img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
-.success-story-content {
-    padding: 15px;
-    text-align: center;
-}
+        .success-story-content {
+            padding: 15px;
+            text-align: center;
+        }
 
-.success-story h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #333;
-}
+        .success-story h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
 
-.success-story p {
-    font-size: 1em;
-    color: #555;
-    margin: 10px 0;
-}
+        .success-story p {
+            font-size: 1em;
+            color: #555;
+            margin: 10px 0;
+        }
 
-.likes {
-    color: #00bcd4;
-    font-weight: bold;
-    margin: 10px 0;
-}
+        .likes {
+            color: #00bcd4;
+            font-weight: bold;
+            margin: 10px 0;
+        }
 
-.social-links {
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #00bcd4;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #00838f;
+        }
+
+        .add-new {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .add-new:hover {
+            background-color: #e0e0e0;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .add-new-content {
+            text-align: center;
+        }
+
+        .plus-icon {
+            font-size: 3em;
+            color: #00bcd4;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .add-new h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin: 0;
+        }
+
+        .college-buttons button {
+            background-color: #3f68ce;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .college-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+            /* Add this CSS for the new form dialog */
+.dialog-content form {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+}
+
+.dialog-content form label {
+    margin: 10px 0 5px;
+}
+
+.dialog-content form input,
+.dialog-content form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dialog-content form button {
     margin-top: 10px;
 }
 
-.social-links a {
-    text-decoration: none;
-    color: #00bcd4;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #00838f;
-}
-
-.success-stories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.success-story {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.success-story:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.success-story img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.success-story-content {
-    padding: 15px;
-    text-align: center;
-}
-
-.success-story h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #333;
-}
-
-.success-story p {
-    font-size: 1em;
-    color: #555;
-    margin: 10px 0;
-}
-
-.likes {
-    color: #00bcd4;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+/* Style for the detail boxes */
+.detail-box {
     margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
-
-.social-links a {
-    text-decoration: none;
-    color: #00bcd4;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #00838f;
-}
-
-.add-new {
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.add-new:hover {
-    background-color: #e0e0e0;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.add-new-content {
-    text-align: center;
-}
-
-.plus-icon {
-    font-size: 3em;
-    color: #00bcd4;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.add-new h3 {
-    font-size: 1.2em;
-    color: #333;
-    margin: 0;
-}
-
 </style>
 
 </head>
@@ -360,77 +370,145 @@
     <div class="content" id="colleges-content">
         <h1>Top Colleges</h1>
         <div class="college-grid">
-            <a href="https://igrua.gov.in/" target="_blank">
-                <div class="college-box">
+    
+            <!-- College 1 -->
+            <div class="college-box">
+                <a href="https://igrua.gov.in/" target="_blank">
                     <img src="indira_gandhi_college.jpg" alt="IGRUA" />
                     <h2>Indira Gandhi Rashtriya Uran Akademi (IGRUA)</h2>
-                    <p>A notable flying school in Uttar Pradesh that offers Commercial Pilot License (CPL) training</p>
+                </a>
+                <div class="college-buttons">
+                    <button onclick="showDialog('fee-dialog')">Fee Structure</button>
+                    <button onclick="showDialog('exam-dialog')">Exams to Get In</button>
                 </div>
-                </a>
+            </div>
     
+            <!-- College 2 -->
+            <div class="college-box">
                 <a href="https://www.cae.com/civil-aviation/locations/cae-gondia-nfti/" target="_blank">
-                    <div class="college-box">
-                        <img src="nfi.jpeg" alt="CAE" />
-                        <h2>CAE - National Flying Training Institute</h2>
-                        <p>A well-regarded pilot training college offering a range of aviation courses</p>
-                    </div>
+                    <img src="nfi.jpeg" alt="CAE" />
+                    <h2>CAE - National Flying Training Institute</h2>
                 </a>
+                <div class="college-buttons">
+                    <button onclick="showDialog('fee-dialog')">Fee Structure</button>
+                    <button onclick="showDialog('exam-dialog')">Exams to Get In</button>
+                </div>
+            </div>
     
+            <!-- College 3 -->
+            <div class="college-box">
                 <a href="https://www.aaa.co.in/" target="_blank">
-                <div class="college-box">
                     <img src="ahem_a.jpeg" alt="AAA" />
                     <h2>Ahmedabad Aviation and Aeronautics Ltd. (AAA)</h2>
-                    <p>A notable flying school in Gujarat that offers CPL training.</p>
-                </div>
                 </a>
+                <div class="college-buttons">
+                    <button onclick="showDialog('fee-dialog')">Fee Structure</button>
+                    <button onclick="showDialog('exam-dialog')">Exams to Get In</button>
+                </div>
+            </div>
     
+            <!-- College 4 -->
+            <div class="college-box">
                 <a href="https://www.thebombayflyingclub.com/" target="_blank">
-                <div class="college-box">
                     <img src="bombay_flyclub.jpeg" alt="The Bombay Flying Club" />
                     <h2>The Bombay Flying Club</h2>
-                    <p>A popular pilot training college offering various aviation programs.</p>
-                </div>
                 </a>
+                <div class="college-buttons">
+                    <button onclick="showDialog('fee-dialog')">Fee Structure</button>
+                    <button onclick="showDialog('exam-dialog')">Exams to Get In</button>
+                </div>
+            </div>
     
+            <!-- College 5 -->
+            <div class="college-box">
                 <a href="https://rajivgandhiacademyforaviationtechnology.org/" target="_blank">
-                <div class="college-box">
                     <img src="rajiv_gandhi.jpg" alt="Rajiv Gandhi Aviation Academy" />
                     <h2>Rajiv Gandhi Aviation Academy</h2>
-                    <p>A well-known pilot training college with a strong reputation.</p>
-                </div>
                 </a>
+                <div class="college-buttons">
+                    <button onclick="showDialog('fee-dialog')">Fee Structure</button>
+                    <button onclick="showDialog('exam-dialog')">Exams to Get In</button>
+                </div>
+            </div>
     
+            <!-- College 6 -->
+            <div class="college-box">
                 <a href="https://socat.silveroakuni.ac.in/" target="_blank">
-                <div class="college-box">
                     <img src="silver_oak.webp" alt="Silver Oak University" />
                     <h2>Silver Oak University</h2>
-                    <p>A popular pilot training college offering CPL and aviation courses.</p>
+                </a>
+                <div class="college-buttons">
+                    <button onclick="showDialog('fee-dialog')">Fee Structure</button>
+                    <button onclick="showDialog('exam-dialog')">Exams to Get In</button>
                 </div>
-                </a>
+            </div>
     
+            <!-- College 7 -->
+            <div class="college-box">
                 <a href="https://www.igiaindia.in/" target="_blank">
-                    <div class="college-box">
-                        <img src="janak_igia.png" alt="IGIA" />
-                        <h2>IGIA (Indira Gandhi Institute of Aeronautics) Janakpuri</h2>
-                        <p>A popular aviation institute known for its pilot training programs.</p>
-                    </div>
+                    <img src="janak_igia.png" alt="IGIA" />
+                    <h2>IGIA (Indira Gandhi Institute of Aeronautics) Janakpuri</h2>
                 </a>
+                <div class="college-buttons">
+                    <button onclick="showDialog('fee-dialog')">Fee Structure</button>
+                    <button onclick="showDialog('exam-dialog')">Exams to Get In</button>
+                </div>
+            </div>
     
+            <!-- College 8 -->
+            <div class="college-box">
                 <a href="https://www.worldptc.com/" target="_blank">
-                <div class="college-box">
                     <img src="ptc.png" alt="PTC Aviation Academy" />
                     <h2>PTC Aviation Academy</h2>
-                    <p>A popular pilot training college offering specialized aviation courses.</p>
-                </div>
                 </a>
+                <div class="college-buttons">
+                    <button onclick="showDialog('fee-dialog')">Fee Structure</button>
+                    <button onclick="showDialog('exam-dialog')">Exams to Get In</button>
+                </div>
+            </div>
+    
+        </div>    
     
                 <div class="college-box add-college-box">
                     <h2>Add a College</h2>
                     <p>Click below to add a new college to the list.</p>
                     <button onclick="addCollege()">Add College</button>
                 </div>
-        </div>
-    </div>
+
+                <div class="dialog" id="fee-dialog">
+                    <div class="dialog-content">
+                        <h2>Fee Structure</h2>
+                        <p>The average fee for CPL training in top aviation colleges ranges from INR 20 to 50 lakhs.</p>
+                        <button type="button" onclick="closeDialog('fee-dialog')">Close</button>
+                    </div>
+                </div>
+                
+                <div class="dialog" id="add-college-dialog">
+                    <div class="dialog-content">
+                        <h2>Add a New College</h2>
+                        <form id="add-college-form" onsubmit="submitCollegeForm(event)">
+                            <label for="college-name">College Name:</label>
+                            <input type="text" id="college-name" name="college-name" required>
+                            
+                            <label for="college-fee">Fee Structure:</label>
+                            <input type="text" id="college-fee" name="college-fee" required>
+                            
+                            <label for="college-exams">Exams to Get In:</label>
+                            <input type="text" id="college-exams" name="college-exams" required>
+                            
+                            <label for="college-description">Description:</label>
+                            <textarea id="college-description" name="college-description" rows="4" required></textarea>
+                            
+                            <label for="college-image">College Image:</label>
+                            <input type="file" id="college-image" name="college-image" accept="image/*" required>
+                            
+                            <button type="submit">Add College</button>
+                            <button type="button" onclick="closeDialog('add-college-dialog')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                
+                
 
     <div class="content" id="resources-content">
         <h1>Scholarships and Funding Options</h1>
@@ -487,7 +565,6 @@
     
         
     <script>
-        // Function to show active content and hide others
         function showContent(sectionId) {
             var contents = document.querySelectorAll('.content');
             contents.forEach(function(content) {
@@ -507,7 +584,16 @@
             document.querySelector('#' + sectionId + '-link').classList.add('active');
         }
 
-        // Event listeners for navigation links
+         // Function to show the dialog box
+         function showDialog(dialogId) {
+            document.getElementById(dialogId).style.display = 'flex'; // Use 'flex' to center the dialog
+        }
+
+        // Function to close the dialog box
+        function closeDialog(dialogId) {
+            document.getElementById(dialogId).style.display = 'none';
+        }
+
         document.getElementById('criteria-link').addEventListener('click', function() {
             showContent('criteria-content');
         });
@@ -526,6 +612,93 @@
 
         // Show the "Criteria" section by default on page load
         showContent('criteria-content');
+
+        // Function to show the add college dialog
+function addCollege() {
+    document.getElementById('add-college-dialog').style.display = 'flex';
+}
+
+// Function to submit the college form
+function submitCollegeForm(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('college-name').value;
+    const fee = document.getElementById('college-fee').value;
+    const exams = document.getElementById('college-exams').value;
+    const description = document.getElementById('college-description').value;
+    const image = document.getElementById('college-image').files[0];
+
+    if (!image) {
+        alert('Please upload an image.');
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const newCollegeBox = document.createElement('a');
+        newCollegeBox.href = "#";
+        newCollegeBox.innerHTML = `
+            <div class="college-box">
+                <img src="${e.target.result}" alt="${name}" />
+                <h2>${name}</h2>
+                <p>${description}</p>
+                <div class="college-buttons">
+                    <button onclick="toggleDetails('${name}-fee')">Fee Structure</button>
+                    <button onclick="toggleDetails('${name}-exams')">Exams</button>
+                </div>
+                <div id="${name}-fee" class="detail-box" style="display: none;">
+                    <p>${fee}</p>
+                </div>
+                <div id="${name}-exams" class="detail-box" style="display: none;">
+                    <p>${exams}</p>
+                </div>
+            </div>
+        `;
+        document.querySelector('.college-grid').appendChild(newCollegeBox);
+
+        // Close the dialog after submission
+        closeDialog('add-college-dialog');
+    };
+
+    reader.readAsDataURL(image);
+}
+
+
+// Function to close any dialog
+function closeDialog(dialogId) {
+    document.getElementById(dialogId).style.display = 'none';
+}
+
+// Function to toggle the visibility of details
+function toggleDetails(detailId) {
+    const detailBox = document.getElementById(detailId);
+    if (detailBox.style.display === 'none') {
+        detailBox.style.display = 'block';
+    } else {
+        detailBox.style.display = 'none';
+    }
+}
+</script>
+
+<script>
+        // JavaScript to toggle visibility of content based on navbar clicks
+        const links = document.querySelectorAll('.navbar a');
+        const contentSections = document.querySelectorAll('.content');
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Remove active class from all links and content
+                links.forEach(l => l.classList.remove('active'));
+                contentSections.forEach(section => section.classList.remove('active'));
+
+                // Add active class to the clicked link and corresponding content
+                link.classList.add('active');
+                const contentId = link.id.replace('-link', '-content');
+                document.getElementById(contentId).classList.add('active');
+            });
+        });
     </script>
 
 </body>

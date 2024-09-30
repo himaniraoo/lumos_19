@@ -69,7 +69,28 @@ button:hover {
     background-color: #37405a;
 }
 
+/* Leaf Decorations */
+.leaf {
+    position: absolute;
+    background-image: url('leaf.png'); /* Replace with your actual leaf image URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    opacity: 0.7; /* Slight transparency */
+}
 
+
+
+.leaf-3 {
+    bottom: -20px;
+    left: 40%;
+}
+
+.leaf-4 {
+    bottom: -20px;
+    right: 40%;
+}
 
 /* Optional: Add responsiveness */
 @media (max-width: 768px) {

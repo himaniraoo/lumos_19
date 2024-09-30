@@ -5,153 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Careers</title>
     <style>
-        /* Your existing CSS styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            text-align: center;
-            padding: 20px 0; /* Reduced the padding to make the header background smaller */
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        #searchBar {
-            width: 60%;
-            padding: 12px 20px;
-            border: 2px solid #e0e0e0;
-            border-radius: 30px;
-            margin-top: 10px;
-            font-size: 16px;
-        }
-        #careerGrid {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        .careerCard {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            animation: fadeIn 0.5s ease-out;
-            display: flex;
-            flex-direction: row;
-            background-color: white;
-            max-height: 300px;
-        }
-        .careerCard img {
-            width: 50%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 15px 0 0 15px;
-            transition: opacity 0.3s ease;
-        }
-        .careerCard:hover img {
-            opacity: 0.2;  /* Dim image on hover */
-        }
-        .careerInfo {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 50%;
-        }
-        .careerInfo h2 {
-            font-size: 1.6rem;
-            margin: 0 0 10px;
-        }
-        .careerInfo p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: scale(0.9); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-        /* Styles for the Add Button */
-        #addCareerBtn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #28a745;
-            color: white;
-            font-size: 24px;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        /* Modal Styling */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .modal-content {
-            background-color: white;
-            margin: 10% auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 50%;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover, .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        form label {
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        form input {
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        form button {
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        form button:hover {
-            background-color: #218838;
-        }
-        /* Improved Styling for Quiz Section */
-        #quizSection {
+          body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#searchBar {
+    width: 60%;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#careerGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.careerCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    animation: fadeIn 0.5s ease-out;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    max-height: 300px;
+}
+
+.careerCard img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+    transition: opacity 0.3s ease;
+}
+
+.careerCard:hover img {
+    opacity: 0.2;  /* Dim image on hover */
+}
+
+.careerInfo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.careerInfo h2 {
+    font-size: 1.6rem;
+    margin: 0 0 10px;
+}
+
+.careerInfo p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Styles for the Add Button */
+#addCareerBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #28a745;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+ /* Improved Styling for Quiz Section */
+ #quizSection {
             position: fixed;
             bottom: 20px;
             left: 50%;
@@ -184,7 +203,7 @@
         }
         #quizSection button:hover {
             background-color: #218838;
-        }
+        }
     </style>
 </head>
 <body>
@@ -194,75 +213,100 @@
     </header>
 
     <section id="careerGrid">
-        <!-- Career Post for Pilot -->
-        <div class="careerCard" data-career="Pilot">
-            <img src="pilot.jpg" alt="Pilot Career">
-            <div class="careerInfo">
-                <h2>Pilot</h2>
-                <p>Potential Earnings: $80,000 - $200,000/year</p>
-                <p>Required Subjects: Physics, Mathematics, English</p>
-                <p>Exams Required: Commercial Pilot License (CPL)</p>
-                <p>Recommended Colleges: Embry-Riddle Aeronautical University, Purdue University</p>
-            </div>
-        </div>
+                <!-- Career Post for Pilot -->
+                 <a href="after_explore.html" style="text-decoration: none; color: inherit;">
+                <div class="careerCard">
+                    <img src="pilot.jpg" alt="Pilot Career">
+                    <div class="careerInfo">
+                        <h2>Pilot</h2>
+                        <p>Potential Earnings: $80,000 - $200,000/year</p>
+                        <p>Required Subjects: Physics, Mathematics, English</p>
+                        <p>Exams Required: Commercial Pilot License (CPL)</p>
+                        <p>Recommended Colleges: Embry-Riddle Aeronautical University, Purdue University</p>
+                    </div>
+                </div>
+                </a>
+        
+                <!-- Career Post for Software Engineer -->
+<div class="careerCard">
+    <img src="engineering.jpg" alt="Software Engineer Career">
+    <div class="careerInfo">
+        <h2>Software Engineer</h2>
+        <p>Potential Earnings: $90,000 - $150,000/year</p>
+        <p>Required Subjects: Computer Science, Mathematics</p>
+        <p>Exams Required: None, but certifications recommended</p>
+        <p>Recommended Colleges: MIT, Stanford, Carnegie Mellon University</p>
+    </div>
+</div>
 
-        <!-- Career Post for Software Engineer -->
-        <div class="careerCard" data-career="Software Engineer">
-            <img src="engineering.jpg" alt="Software Engineer Career">
-            <div class="careerInfo">
-                <h2>Software Engineer</h2>
-                <p>Potential Earnings: $90,000 - $150,000/year</p>
-                <p>Required Subjects: Computer Science, Mathematics</p>
-                <p>Exams Required: None, but certifications recommended</p>
-                <p>Recommended Colleges: MIT, Stanford, Carnegie Mellon University</p>
-            </div>
-        </div>
-
-        <!-- Career Post for Journalism -->
-        <div class="careerCard" data-career="Journalism">
-            <img src="journalism.jpg" alt="Journalism Career">
-            <div class="careerInfo">
-                <h2>Journalism</h2>
-                <p>Potential Earnings: $40,000 - $90,000/year</p>
-                <p>Required Subjects: English, Media Studies, Communication</p>
-                <p>Exams Required: GRE, GMAT (optional)</p>
-                <p>Recommended Colleges: Columbia Journalism School, UC Berkeley</p>
-            </div>
-        </div>
-
-        <!-- Career Post for Forensic Science -->
-        <div class="careerCard" data-career="Forensic Science">
-            <img src="forensic science.jpg" alt="Forensic Science Career">
-            <div class="careerInfo">
-                <h2>Forensic Science</h2>
-                <p>Potential Earnings: $55,000 - $100,000/year</p>
-                <p>Required Subjects: Chemistry, Biology, Criminal Justice</p>
-                <p>Exams Required: Forensic Science Certification</p>
-                <p>Recommended Colleges: University of Florida, Penn State University</p>
-            </div>
-        </div>
-
-        <!-- Career Post for Actuarial Science -->
-        <div class="careerCard" data-career="Actuarial Science">
-            <img src="actuary-examines.jpg" alt="Actuarial Science Career">
-            <div class="careerInfo">
-                <h2>Actuarial Science</h2>
-                <p>Potential Earnings: $70,000 - $150,000/year</p>
-                <p>Required Subjects: Mathematics, Statistics, Business</p>
-                <p>Exams Required: SOA (Society of Actuaries) Exams</p>
-                <p>Recommended Colleges: University of Waterloo, Georgia State University</p>
-            </div>
-        </div>
+        
+                <!-- New Career Post for Journalism -->
+                <div class="careerCard">
+                    <img src="journalism.jpg" alt="Journalism Career">
+                    <div class="careerInfo">
+                        <h2>Journalism</h2>
+                        <p>Potential Earnings: $40,000 - $90,000/year</p>
+                        <p>Required Subjects: English, Media Studies, Communication</p>
+                        <p>Exams Required: GRE, GMAT (optional)</p>
+                        <p>Recommended Colleges: Columbia Journalism School, UC Berkeley</p>
+                    </div>
+                </div>
+        
+                <!-- New Career Post for Forensic Science -->
+                <div class="careerCard">
+                    <img src="forensic science.jpg" alt="Forensic Science Career">
+                    <div class="careerInfo">
+                        <h2>Forensic Science</h2>
+                        <p>Potential Earnings: $55,000 - $100,000/year</p>
+                        <p>Required Subjects: Chemistry, Biology, Criminal Justice</p>
+                        <p>Exams Required: Forensic Science Certification</p>
+                        <p>Recommended Colleges: University of Florida, Penn State University</p>
+                    </div>
+                </div>
+        
+                <!-- New Career Post for Actuarial Science -->
+                <div class="careerCard">
+                    <img src="actuary-examines.jpg" alt="Actuarial Science Career">
+                    <div class="careerInfo">
+                        <h2>Actuarial Science</h2>
+                        <p>Potential Earnings: $70,000 - $120,000/year</p>
+                        <p>Required Subjects: Mathematics, Statistics, Economics</p>
+                        <p>Exams Required: Actuarial Exams (SOA, CAS)</p>
+                        <p>Recommended Colleges: University of Waterloo, Georgia State University</p>
+                    </div>
+                </div>
+        
+                <!-- New Career Post for Research Analyst -->
+                <div class="careerCard">
+                    <img src="research.jpg" alt="Research Analyst Career">
+                    <div class="careerInfo">
+                        <h2>Research Analyst</h2>
+                        <p>Potential Earnings: $60,000 - $110,000/year</p>
+                        <p>Required Subjects: Economics, Data Science, Business</p>
+                        <p>Exams Required: GRE, GMAT (optional)</p>
+                        <p>Recommended Colleges: Harvard University, LSE</p>
+                    </div>
+                </div>
+        
+                <!-- New Career Post for Fashion Designer -->
+                <div class="careerCard">
+                    <img src="fashion.jpg" alt="Fashion Designer Career">
+                    <div class="careerInfo">
+                        <h2>Fashion Designer</h2>
+                        <p>Potential Earnings: $50,000 - $120,000/year</p>
+                        <p>Required Subjects: Fashion Design, Art, Business</p>
+                        <p>Exams Required: None</p>
+                        <p>Recommended Colleges: Parsons School of Design, Central Saint Martins</p>
+                    </div>
+                </div>
     </section>
-
     <!-- Fixed Section for Career Quiz -->
     <section id="quizSection">
         <h2>Not sure? Take a career quiz today.</h2>
         <a href="quiz.html" target="_blank">
             <button>Go to Take a Quiz</button>
         </a>
-    </section>
-
+    </section>
     <!-- Plus Icon for Adding New Career -->
     <button id="addCareerBtn">+</button>
 
@@ -295,39 +339,6 @@
         </div>
     </div>
 
-    <script>
-        // JavaScript to handle redirection on career card click
-        document.querySelectorAll('.careerCard').forEach(card => {
-            card.addEventListener('click', () => {
-                const career = card.getAttribute('data-career');
-                window.location.href = 'about_explore.html?career=' + encodeURIComponent(career);
-            });
-        });
-
-        // Modal functionality
-        const modal = document.getElementById('careerModal');
-        const addCareerBtn = document.getElementById('addCareerBtn');
-        const closeBtn = document.querySelector('.close');
-
-        addCareerBtn.addEventListener('click', () => {
-            modal.style.display = 'block';
-        });
-
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        document.getElementById('careerForm').addEventListener('submit', (event) => {
-            event.preventDefault();
-            alert('Career added!'); // Placeholder for actual form submission logic
-            modal.style.display = 'none';
-        });
-    </script>
+    <script src="explore.js"></script>
 </body>
 </html>

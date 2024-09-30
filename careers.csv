@@ -1,0 +1,5 @@
+id,title,description,skills_required,growth_potential
+1,Software Engineer,"Develops and maintains software applications.",Python;Java;C++,High
+2,Data Scientist,"Analyzes complex data to help make business decisions.",Python;R;SQL,High
+3,Graphic Designer,"Creates visual content for various media.",Photoshop;Illustrator;InDesign,Medium
+4,Mechanical Engineer,"Designs and tests mechanical systems and devices.",CAD;MATLAB;SolidWorks,High
